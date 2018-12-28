@@ -52,6 +52,9 @@ def main_2():
          'uXBqHFjvihuNGEEFsfnMXTfptvIOlhKhyYwxLnqOsBdGvnuyEZIheApQGOXWeXoLWiDQN'\
          'JFaXiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQ'\
          'oiQzTYwZAiRwycdlHfyHNGmkNqSwXUrxGC'
+  pattern='[a-z][a-z][A-Z][A-Z][A-Z][A-Z]+'
+  line=(re.findall(pattern,line_2))
+  print(line)
 
 
 
