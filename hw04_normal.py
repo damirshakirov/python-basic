@@ -52,7 +52,7 @@ def main_2():
          'uXBqHFjvihuNGEEFsfnMXTfptvIOlhKhyYwxLnqOsBdGvnuyEZIheApQGOXWeXoLWiDQN'\
          'JFaXiUWgsKQrDOeZoNlZNRvHnLgCmysUeKnVJXPFIzvdDyleXylnKBfLCjLHntltignbQ'\
          'oiQzTYwZAiRwycdlHfyHNGmkNqSwXUrxGC'
-  pattern='[a-z][a-z][A-Z][A-Z][A-Z][A-Z]+'
+  pattern='[a-z]{2}([A-Z][A-Z])[A-Z]{2}'
   line=(re.findall(pattern,line_2))
   print(line)
 
