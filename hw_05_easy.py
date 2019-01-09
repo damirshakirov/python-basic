@@ -5,24 +5,36 @@ __author__ = 'Шакиров Дамир Харисович'
 # из которой запущен данный скрипт.
 # И второй скрипт, удаляющий эти папки.
 import os
-path=os.getcwd()
-print ('Текущий рабочий каталог: %s' %path)
+def currentdir(): # Возвращает текущий каталог
+	path=os.getcwd()
+	return path
+
+print ('Текущий рабочий каталог: %s' %currentdir())
+
+def createdir(name): # Создает каталог в текущем каталоге
+	os.mkdir(currentdir()+'/'+name)
+
 i=1
 while i<=9: # Создание каталогов
-	os.mkdir(path+'/dir_'+str(i))
+	createdir('dir_'+str(i))
 	i+=1
 input('Нажмите любую кнопку для удаления созданных каталогов')
 
+def deldir(name): # Удаляет каталог в текущем каталоге
+	os.rmdir(currentdir()+'/'+name)
 i=1
 while i<=9: # Удаление каталогов
-	os.rmdir(path+'/dir_'+str(i))
+	deldir('dir_'+str(i))
+#	os.rmdir(currentdir()+'/dir_'+str(i))
 	i+=1
 
 
 # Задача-2:
 # Напишите скрипт, отображающий папки текущей директории.
-files=os.listdir(path)
-print('Содержимое текущего каталога:\n',files)
+def listdir():
+	files=os.listdir(currentdir())
+	return files
+print('Содержимое текущего каталога:\n',listdir())
 
 # Задача-3:
 # Напишите скрипт, создающий копию файла, из которого запущен данный скрипт.

@@ -15,3 +15,35 @@ __author__ = 'Шакиров Дамир Харисович'
 # Для решения данной задачи используйте алгоритмы из задания easy,
 # оформленные в виде соответствующих функций,
 # и импортированные в данный файл из easy.py
+import module
+
+def namedir():
+	name=input('Введите имя папки:')
+	return name
+k=0
+while k!=5:	
+	print('1 - Перейти в папку\n')
+	print('2 - Просмотреть содержимое папки\n')
+	print('3 - Удалить папку\n')
+	print('4 - Создать папку\n')
+	print('5 - Выход')
+	k=input('Ваш выбор?')
+
+	if k=='1':
+		namedir=namedir()
+		print('Действие 1 пока не реализовано')
+	elif k=='2':
+		print(module.listdir())
+	elif k=='3':
+		namedir=namedir()
+		module.deldir(namedir)
+	elif k=='4':
+		namedir=namedir()
+		module.createdir(namedir)
+	elif k=='5':
+		break
+
+
+
+
+
